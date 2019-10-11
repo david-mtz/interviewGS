@@ -10,6 +10,16 @@ import UIKit
 
 class BaseViewController: UIViewController {
 
+    func addHideKeyboardGesture() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+
     func showSingleAlert(message : String) {
         DispatchQueue.main.async {
             let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)

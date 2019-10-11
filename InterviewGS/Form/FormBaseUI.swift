@@ -9,13 +9,18 @@
 import Foundation
 import UIKit
 
+typealias completionCamera = (UIImage) -> Void
 protocol FormDelegate: UIViewController {
-    func presentCameraViewController()
+    func presentCameraViewController(completion: @escaping completionCamera)
 }
 
 class FormBaseViewController: BaseViewController, FormDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
-    func presentCameraViewController() {
+        
+    var completionFromCamera: completionCamera?
+    
+    func presentCameraViewController(completion: @escaping completionCamera) {
+        self.completionFromCamera = completion
         let vc = UIImagePickerController()
         vc.sourceType = .camera
         vc.allowsEditing = true
@@ -30,8 +35,11 @@ class FormBaseViewController: BaseViewController, FormDelegate, UINavigationCont
             print("No image found")
             return
         }
+        
+        guard let completion = self.completionFromCamera else { return }
+        
+        completion(image)
 
-        print(image.size)
     }
 
 }

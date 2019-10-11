@@ -31,7 +31,12 @@ class PhotoTableViewCell: UITableViewCell, FormCellDelegate {
 
     @objc func presentCamera(tapGestureRecognizer: UITapGestureRecognizer) {
         guard let delegate = item?.delegate else {return}
-        //delegate.presentCameraViewController()
+        delegate.presentCameraViewController { [weak self] (image) in
+            DispatchQueue.main.async {
+                self?.photoImageView.image = image
+                self?.item?.value = image.toBase64()
+            }
+        }
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

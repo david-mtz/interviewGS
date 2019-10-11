@@ -26,8 +26,7 @@ class FormViewController: FormBaseViewController {
         self.formTableView.allowsMultipleSelection = true
         self.formTableView.allowsMultipleSelectionDuringEditing = true
         FormCellType.registerCells(for: self.formTableView)
-        formTableView.estimatedRowHeight = 100
-        formTableView.rowHeight = UITableView.automaticDimension
+        self.addHideKeyboardGesture()
     }
         
 }
@@ -88,6 +87,7 @@ extension FormViewController: UITableViewDelegate, UITableViewDataSource {
         
         if let cellWithProtocol = cell as? FormCellDelegate {
             item?.indexPath = indexPath
+            item?.delegate = self
             cellWithProtocol.prepareUI(item!)
         }
     self.generatedForm?.formSection[indexPath.section].sectionItems[indexPath.row].indexPath = indexPath
@@ -125,6 +125,5 @@ extension FormViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.cellForRow(at: indexPath), let section = self.generatedForm?.formSection[indexPath.section], let config = section.selectionConfig else { return }
         cell.accessoryType = .none
     }
-    
     
 }

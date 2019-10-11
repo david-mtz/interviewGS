@@ -46,8 +46,8 @@
             filePath = "InterviewGS/Views/FormViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -222,9 +222,120 @@
             filePath = "InterviewGS/Views/FormViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "tableView(_:heightForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A0625623-EF33-4E60-AAA5-1D8B0DC75B1D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "InterviewGS/Form/CellTypes/Photo/PhotoTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "setUp()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BDF947A9-8272-4925-A3FA-CFB9E9BFC2DD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "InterviewGS/Form/CellTypes/Photo/PhotoTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "presentCamera(tapGestureRecognizer:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F0281F15-76B7-4E4D-B65A-E30D14A2A416"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "InterviewGS/Form/CellTypes/Photo/PhotoTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "presentCamera(tapGestureRecognizer:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F0281F15-76B7-4E4D-B65A-E30D14A2A416 - bc002ec623e86952"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "InterviewGS.PhotoTableViewCell.presentCamera(tapGestureRecognizer: __C.UITapGestureRecognizer) -&gt; ()"
+                  moduleName = "InterviewGS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/david/Proyectos/GrupoSalinas/InterviewGS/InterviewGS/Form/CellTypes/Photo/PhotoTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "332">
+               </Location>
+               <Location
+                  uuid = "F0281F15-76B7-4E4D-B65A-E30D14A2A416 - ae66c3b22c16194d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UIImage) -&gt; () in InterviewGS.PhotoTableViewCell.presentCamera(tapGestureRecognizer: __C.UITapGestureRecognizer) -&gt; ()"
+                  moduleName = "InterviewGS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/david/Proyectos/GrupoSalinas/InterviewGS/InterviewGS/Form/CellTypes/Photo/PhotoTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "F0281F15-76B7-4E4D-B65A-E30D14A2A416 - 217a59200b13dcba"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (__C.UIImage) -&gt; () in InterviewGS.PhotoTableViewCell.presentCamera(tapGestureRecognizer: __C.UITapGestureRecognizer) -&gt; ()"
+                  moduleName = "InterviewGS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/david/Proyectos/GrupoSalinas/InterviewGS/InterviewGS/Form/CellTypes/Photo/PhotoTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5A5B3312-4C92-4718-A842-D6B06BCB6424"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "InterviewGS/Form/CellTypes/Text/TextTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "prepareUI(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

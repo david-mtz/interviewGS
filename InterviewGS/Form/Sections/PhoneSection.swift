@@ -27,7 +27,7 @@ class PhoneSection: FormSectionProtocol {
     init() {
         let textField = TextItem()
         textField.label = "phoneNumber"
-        textField.textfieldProperties = TextFieldProperties(placeholder: "Ingresa tu número télefónico", keyboardType: .alphabet)
+        textField.textfieldProperties = TextFieldProperties(placeholder: "Ingresa tu número télefónico", keyboardType: .phonePad)
         self.sectionItems.append(textField)
     }
 
