@@ -11,7 +11,7 @@ import UIKit
 class FormViewController: FormBaseViewController {
 
     var generatedForm: Form?
-    var formPresenterProtocol: FormPresenter = FormPresenter()
+    var formPresenter: FormPresenter = FormPresenter()
     
     @IBOutlet weak var formTableView: UITableView!
     
@@ -27,26 +27,45 @@ class FormViewController: FormBaseViewController {
         self.formTableView.allowsMultipleSelectionDuringEditing = true
         FormCellType.registerCells(for: self.formTableView)
         self.addHideKeyboardGesture()
+        self.formPresenter.attachView(view: self)
     }
-        
+    
+    
+    @IBAction func validateForm(_ sender: UIButton) {
+        self.formPresenter.validate(form: self.generatedForm!)
+    }
+    
 }
 
 extension FormViewController: FormPresenterProtocol {
     func startFormPresenter() {
-        // Activity loading
+        // Start loading ...
     }
     
-    func successFormPresenter() {
+    func successValidationFormPresenter() {
+        self.showSingleAlert(title: "Formulario válido", message: "Datos válidos")
+        self.formPresenter.sendInformation(form: self.generatedForm!)
+    }
+    
+    func errorValidationFormPresenter() {
+        if self.generatedForm?.errors.count ?? 0 > 0, let message = self.generatedForm?.errors.joined(separator: "\n") {
+            self.showSingleAlert(message: message)
+        }
+    }
+    
+    func successSendFormPresenter() {
         // ToDo
+        debugPrint("ToDo: Send information to service")
     }
     
-    func errorFormPresenter(error: String) {
+    func errorSendFormPresenter(error: String) {
         self.showSingleAlert(message: error)
     }
     
     func stopFormPresenter() {
-        // Stop Activity loading
+        // Stop activity indicador
     }
+    
     
     
 }

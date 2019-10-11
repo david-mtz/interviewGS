@@ -20,9 +20,9 @@ class BaseViewController: UIViewController {
         view.endEditing(true)
     }
 
-    func showSingleAlert(message : String) {
+    func showSingleAlert(title: String = "Error", message : String) {
         DispatchQueue.main.async {
-            let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
             let okAction = UIAlertAction(title: "Aceptar", style: .default)
             
             alert.addAction(okAction)

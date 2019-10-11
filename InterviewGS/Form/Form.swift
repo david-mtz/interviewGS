@@ -19,14 +19,13 @@ class Form {
     
     func isValid() -> Bool {
         errors = [String]()
-        var isValid:Bool = true
         for section in self.formSection {
             let result = section.validate()
             if !result.isValidate {
                 self.errors.append(result.error ?? "")
             }
         }
-        return isValid
+        return errors.count > 0 ? false : true
     }
     
 }

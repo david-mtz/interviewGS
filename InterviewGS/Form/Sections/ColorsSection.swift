@@ -42,7 +42,7 @@ class ColorSection: FormSectionProtocol {
         }
         
         if count < self.minOptions {
-            return ValidateSection(isValidate: false, error: GenderErrors.empty.rawValue)
+            return ValidateSection(isValidate: false, error: ColorsErrors.empty.rawValue)
         }
         
         return ValidateSection(isValidate: true, error: nil)
@@ -52,8 +52,9 @@ class ColorSection: FormSectionProtocol {
     func getValue() -> Any? {
         var optionsResult: [String:Any] = [String:Any]()
         for option in sectionItems {
-            if let key = option.label {
-                optionsResult[key] = option.value
+            if option.isSelected {
+                let key = option.value ?? ""
+                optionsResult[key] = option.label
             }
         }
         return optionsResult as? Any
@@ -63,5 +64,5 @@ class ColorSection: FormSectionProtocol {
 }
 
 enum ColorsErrors: String {
-    case empty = "Debes seleccionar al menos una opción"
+    case empty = "Debes seleccionar al menos una opción en la sección de colores"
 }

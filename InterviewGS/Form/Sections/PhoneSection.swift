@@ -35,9 +35,11 @@ class PhoneSection: FormSectionProtocol {
         
         guard let item = sectionItems.first else { return ValidateSection(isValidate: false, error: "Error inesperado en la sección" + self.title)}
         
+        let charsCount = item.value?.count ?? 0
+        
         if item.value == nil || item.value == "" {
             return ValidateSection(isValidate: false, error: PhoneErrors.empty.rawValue)
-        } else if item.value?.count ?? 0 != 8 || item.value?.count ?? 0 != 10 {
+        } else if charsCount != 8 && charsCount != 10 {
             return ValidateSection(isValidate: false, error: PhoneErrors.lenght.rawValue)
         }
         

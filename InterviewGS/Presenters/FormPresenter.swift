@@ -10,8 +10,10 @@ import Foundation
 
 protocol FormPresenterProtocol: class {
     func startFormPresenter()
-    func successFormPresenter()
-    func errorFormPresenter(error: String)
+    func successValidationFormPresenter()
+    func errorValidationFormPresenter()
+    func successSendFormPresenter()
+    func errorSendFormPresenter(error: String)
     func stopFormPresenter()
 }
 
@@ -27,6 +29,16 @@ class FormPresenter {
         self.view = nil
     }
     
+    func validate(form: Form) {
+        self.view?.startFormPresenter()
+        if form.isValid() {
+            self.view?.successValidationFormPresenter()
+        } else {
+            self.view?.errorValidationFormPresenter()
+        }
+        self.view?.stopFormPresenter()
+    }
+    
     
     func sendInformation(form: Form) {
         self.view?.startFormPresenter()
@@ -35,7 +47,7 @@ class FormPresenter {
             debugPrint(section.getValue())
         }
         
-        self.view?.successFormPresenter()
+        self.view?.successSendFormPresenter()
         
         self.view?.stopFormPresenter()
     }

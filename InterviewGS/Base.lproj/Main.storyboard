@@ -74,16 +74,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="44" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="iUF-k6-4Vm">
-                                <rect key="frame" x="15" y="20" width="384" height="768"/>
+                                <rect key="frame" x="15" y="20" width="384" height="744"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5m-QC-S6o">
+                                <rect key="frame" x="0.0" y="764" width="414" height="44"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Validar">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="validateForm:" destination="y1q-fk-odu" eventType="touchUpInside" id="Lqm-wM-QVn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="m5m-QC-S6o" firstAttribute="top" secondItem="iUF-k6-4Vm" secondAttribute="bottom" id="6Cl-f1-UDK"/>
                             <constraint firstItem="z7z-Ac-LAW" firstAttribute="trailing" secondItem="iUF-k6-4Vm" secondAttribute="trailing" constant="15" id="Bbu-ev-Vds"/>
-                            <constraint firstItem="z7z-Ac-LAW" firstAttribute="bottom" secondItem="iUF-k6-4Vm" secondAttribute="bottom" constant="20" id="TW2-Gq-wXx"/>
+                            <constraint firstItem="z7z-Ac-LAW" firstAttribute="bottom" secondItem="iUF-k6-4Vm" secondAttribute="bottom" constant="44" id="TW2-Gq-wXx"/>
+                            <constraint firstItem="m5m-QC-S6o" firstAttribute="leading" secondItem="z7z-Ac-LAW" secondAttribute="leading" id="YxD-Iq-fAa"/>
+                            <constraint firstItem="z7z-Ac-LAW" firstAttribute="trailing" secondItem="m5m-QC-S6o" secondAttribute="trailing" id="hwI-Cc-SdL"/>
                             <constraint firstItem="iUF-k6-4Vm" firstAttribute="top" secondItem="z7z-Ac-LAW" secondAttribute="top" constant="20" id="jdu-H9-u3h"/>
                             <constraint firstItem="iUF-k6-4Vm" firstAttribute="leading" secondItem="z7z-Ac-LAW" secondAttribute="leading" constant="15" id="sXT-Qh-i1t"/>
+                            <constraint firstItem="z7z-Ac-LAW" firstAttribute="bottom" secondItem="m5m-QC-S6o" secondAttribute="bottom" id="xFg-AF-ZYO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="z7z-Ac-LAW"/>
                     </view>

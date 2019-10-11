@@ -30,12 +30,21 @@ class PhotoSection: FormSectionProtocol {
         
         guard let item = sectionItems.first else { return ValidateSection(isValidate: false, error: "Error inesperado en la sección" + self.title)}
         
+        if sectionItems.first?.value == nil || sectionItems.first?.value == "" {
+            return ValidateSection(isValidate: false, error: PhotoSectionErrors.empty.rawValue)
+        }
+        
         return ValidateSection(isValidate: true, error: nil)
     }
 
     func getValue() -> Any? {
-        return "Result" as? Any
+        guard let item = sectionItems.first else { return nil}
+        return item.value as? Any
     }
     
     
+}
+
+enum PhotoSectionErrors: String {
+    case empty = "No te has tomado una foto aún"
 }
